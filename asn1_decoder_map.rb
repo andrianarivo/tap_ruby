@@ -1,3 +1,4 @@
+require './models/transfer_batch'
 require 'openssl'
 require 'pp'
 
@@ -12,7 +13,7 @@ def decode_asn1_der(file_path)
   values = asn1_to_map(asn1)
 
   # Print the JSON representation
-  pp values[1][3][3]
+  pp TransferBatch.from_map(values[1])
 end
 
 def asn1_to_map(asn1_data)

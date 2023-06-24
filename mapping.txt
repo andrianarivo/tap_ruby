@@ -33,6 +33,7 @@
 10 = MobileTerminatedCall
 9 = MobileOriginatedCall
 153 = BasicCallInformation
+147 = BasicCallInformation
 427 = ChargeableSubscriber
 199 = SimChargeableSubscriber
 129 = Imsi
