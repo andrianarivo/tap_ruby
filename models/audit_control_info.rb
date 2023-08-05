@@ -21,8 +21,10 @@ class AuditControlInfo
     total_discount_value = Utils.ascii_to_i(map[4][225])
     call_event_details_count = Utils.ascii_to_i(map[5][43])
     operator_spec_information = []
-    map[6][162].each do | element |
-      operator_spec_information.push(element[163])
+    if map.length == 7
+      map[6][162].each do | element |
+        operator_spec_information.push(element[163])
+      end
     end
     new(earliest_call_timestamp, latest_call_timestamp, total_charge, total_tax_value, total_discount_value, call_event_details_count, operator_spec_information)
   end

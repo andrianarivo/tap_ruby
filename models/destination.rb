@@ -10,7 +10,8 @@ class Destination
 
   def self.from_map(map)
     called_number = Utils.ascii_to_s(map[0][407])
-    dialled_digits = map[0][279]
-    sms_destination_number = map[0][419]
+    dialled_digits = map[1][279]
+    sms_destination_number = map[2][419]
+    new(called_number, dialled_digits, sms_destination_number)
   end
 end

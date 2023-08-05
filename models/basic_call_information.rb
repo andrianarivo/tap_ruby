@@ -2,6 +2,7 @@ require_relative 'call_originator'
 require_relative 'timestamp_offset'
 require_relative 'sim_chargeable_subscriber'
 require_relative 'destination'
+require 'pp'
 
 class BasicCallInformation
   attr_accessor :chargeable_subscriber,:destination, :call_originator, :call_event_start_timestamp, :total_call_event_duration
@@ -29,6 +30,6 @@ class BasicCallInformation
     end
     call_event_start_timestamp = TimestampOffset.from_map(map[2][44])
     total_call_event_duration = Utils.ascii_to_i(map[3][223])
-    new(chargeable_subscriber, call_event_start_timestamp, total_call_event_duration, call_originator)
+    new(chargeable_subscriber, call_event_start_timestamp, total_call_event_duration, call_originator, destination)
   end
 end

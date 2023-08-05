@@ -3,6 +3,7 @@ require_relative 'accounting_info'
 require_relative 'network_info'
 require_relative 'mobile_terminated_call'
 require_relative 'mobile_originated_call'
+require_relative 'gprs_call'
 require_relative 'audit_control_info'
 
 class TransferBatch
@@ -28,6 +29,9 @@ class TransferBatch
       end
       if element[9] != nil
         call_event_detail = MobileOriginatedCall.from_map(element[9])
+      end
+      if element[14] != nil
+        call_event_detail = GprsCall.from_map(element[14])
       end
       call_event_details.push(call_event_detail)
     end

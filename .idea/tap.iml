@@ -5,7 +5,9 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Remote-rvm: ruby-3.2.2 (-p53" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.4.10, Remote-rvm: ruby-3.2.2 (-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="method_source (v1.0.0, Remote-rvm: ruby-3.2.2 (-p53) [gem]" level="application" />
   </component>
 </module>

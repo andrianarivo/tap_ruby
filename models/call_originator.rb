@@ -11,8 +11,10 @@ class CallOriginator
     if map[0][405] != nil
       calling_number = Utils.ascii_to_s(map[0][405])
     end
-    if map[0][425] != nil
-      sms_originator = Utils.ascii_to_s(map[0][425])
+    if map.length > 1
+      if map[1][425] != nil
+        sms_originator = map[1][425]
+      end
     end
     new(calling_number, sms_originator)
   end
